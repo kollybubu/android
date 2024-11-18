@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#FFFFFF"
+    android:elevation="8dp"
+    android:layout_margin="16dp">
+
+    <TextView
+        android:id="@+id/popupTeacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yoga Teacher: "/>
+
+    <TextView
+        android:id="@+id/popupDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: "/>
+
+    <TextView
+        android:id="@+id/popupTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time: "/>
+
+    <TextView
+        android:id="@+id/popupLesson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lesson: "/>
+
+    <TextView
+        android:id="@+id/popupGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender Option: "/>
+
+    <TextView
+        android:id="@+id/popupPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price: "/>
+
+</LinearLayout>

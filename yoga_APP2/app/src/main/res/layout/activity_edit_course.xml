@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_edit_course.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/dayField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Day" />
+
+    <EditText
+        android:id="@+id/dateField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date" />
+
+    <EditText
+        android:id="@+id/timeField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Time" />
+
+    <EditText
+        android:id="@+id/teacherField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Teacher" />
+
+
+    <EditText
+        android:id="@+id/capacityField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Capacity" />
+
+    <EditText
+        android:id="@+id/durationField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Duration" />
+
+    <EditText
+        android:id="@+id/priceField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Price" />
+
+    <EditText
+        android:id="@+id/typeField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type" />
+
+    <EditText
+        android:id="@+id/lessonField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Lesson" />
+
+    <EditText
+        android:id="@+id/descriptionField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description" />
+
+    <EditText
+        android:id="@+id/genderField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gender Option" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Course" />
+
+</LinearLayout>
+

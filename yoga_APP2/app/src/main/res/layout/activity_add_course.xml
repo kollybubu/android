@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/dayField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Day of the week" />
+
+    <EditText
+        android:id="@+id/dateField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Date (YYYY-MM-DD)" />
+
+    <EditText
+        android:id="@+id/timeField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Time (HH:MM)" />
+
+    <EditText
+        android:id="@+id/teacherField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Teacher Name" />
+
+    <EditText
+        android:id="@+id/capacityField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Capacity" />
+
+    <EditText
+        android:id="@+id/durationField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Duration (e.g., 1h)" />
+
+    <EditText
+        android:id="@+id/priceField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Price" />
+
+    <EditText
+        android:id="@+id/typeField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Type of Class" />
+
+    <EditText
+        android:id="@+id/descriptionField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description (Optional)" />
+
+    <EditText
+        android:id="@+id/lessonField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Lesson Topic" />
+
+    <Spinner
+        android:id="@+id/genderField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Course" />
+</LinearLayout>
