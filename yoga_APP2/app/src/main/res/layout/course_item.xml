@@ -1,72 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="10dp"
-    android:background="#FFFFFF"
-    android:elevation="4dp"
-    >
-
-    <TextView
-        android:id="@+id/courseDay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Day"
-        android:textSize="16sp"
-        android:textColor="#000000" />
-
-    <TextView
-        android:id="@+id/courseTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Time"
-        android:textSize="16sp"
-        android:textColor="#000000" />
-
-    <TextView
-        android:id="@+id/courseType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Type"
-        android:textSize="16sp"
-        android:textColor="#000000" />
+    android:layout_margin="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="end"
-        >
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="16dp">
+
         <TextView
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/courseInfo"
+            android:id="@+id/courseDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Day"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/courseTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/courseType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:textSize="16sp"
-            android:textColor="@android:color/black" />
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/courseInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
 
-        <!-- Edit Button with better contrast -->
-        <Button
-            android:id="@+id/editButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Edit"
-            android:textColor="#FFFFFF"
-            android:background="#D87A1D" /> <!-- Darker orange for better contrast -->
+            <!-- Edit Button with better contrast -->
+            <Button
+                android:id="@+id/editButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#D87A1D"
+                android:text="Edit"
+                android:textColor="#FFFFFF" /> <!-- Darker orange for better contrast -->
 
-        <!-- Delete Button with better contrast -->
-        <Button
-            android:id="@+id/deleteButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="Delete"
-            android:textColor="#FFFFFF"
-            android:background="#E64A19" /> <!-- Darker red for better contrast -->
+            <!-- Delete Button with better contrast -->
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="#E64A19"
+                android:text="Delete"
+                android:textColor="#FFFFFF" /> <!-- Darker red for better contrast -->
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
-
+</androidx.cardview.widget.CardView>

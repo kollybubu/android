@@ -5,7 +5,7 @@ import java.sql.Date
 class YogaCourse(
     val id: Int,
     val dayofweek: String,  // Make sure this matches COLUMN_DAY
-    val date: Date,
+    val date: String,
     val time: String,       // Make sure this matches COLUMN_TIME
     val teacher: String,
     val capacity: Int,      // Make sure this matches COLUMN_CAPACITY

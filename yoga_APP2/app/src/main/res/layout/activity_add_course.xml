@@ -1,77 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <EditText
+    <Spinner
         android:id="@+id/dayField"
+        style="@style/UserInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Day of the week" />
+        android:layout_height="48dp"
+        android:prompt="@string/day_prompt"
+        android:spinnerMode="dialog" />
 
-    <EditText
+    <TextView
         android:id="@+id/dateField"
+        style="@style/UserInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Date (YYYY-MM-DD)" />
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:hint="Date (YYYY-MM-DD)"
+        android:textSize="18sp" />
 
-    <EditText
+    <TextView
         android:id="@+id/timeField"
+        style="@style/UserInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Time (HH:MM)" />
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:hint="Time (HH:MM)"
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/teacherField"
+        style="@style/UserInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Teacher Name" />
+        android:layout_height="48dp"
+        android:hint="Teacher Name"
+        android:inputType="text"
+        android:maxLines="1" />
 
     <EditText
         android:id="@+id/capacityField"
+        style="@style/UserInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Capacity" />
+        android:layout_height="48dp"
+        android:hint="Capacity"
+        android:inputType="number"
+        android:maxLines="1" />
 
     <EditText
         android:id="@+id/durationField"
+        style="@style/UserInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Duration (e.g., 1h)" />
+        android:layout_height="48dp"
+        android:hint="Duration (e.g., 1h)"
+        android:inputType="numberDecimal"
+        android:maxLines="1" />
 
     <EditText
         android:id="@+id/priceField"
+        style="@style/UserInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Price" />
+        android:layout_height="48dp"
+        android:hint="Price"
+        android:inputType="numberDecimal"
+        android:maxLines="1" />
 
     <EditText
         android:id="@+id/typeField"
+        style="@style/UserInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Type of Class" />
+        android:layout_height="48dp"
+        android:hint="Type of Class"
+        android:inputType="text"
+        android:maxLines="1" />
 
     <EditText
         android:id="@+id/descriptionField"
+        style="@style/UserInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Description (Optional)" />
+        android:layout_height="48dp"
+        android:hint="Description (Optional)"
+        android:inputType="text"
+        android:maxLines="1" />
 
     <EditText
         android:id="@+id/lessonField"
+        style="@style/UserInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Lesson Topic" />
+        android:layout_height="48dp"
+        android:hint="Lesson Topic"
+        android:inputType="text"
+        android:maxLines="1" />
 
     <Spinner
         android:id="@+id/genderField"
+        style="@style/UserInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="48dp"
+        android:prompt="@string/gender_prompt"
+        android:spinnerMode="dialog" />
 
     <Button
         android:id="@+id/saveButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
         android:text="Save Course" />
 </LinearLayout>

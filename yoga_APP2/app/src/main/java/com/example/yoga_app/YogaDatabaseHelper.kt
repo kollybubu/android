@@ -112,7 +112,7 @@ class YogaDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
             do {
                 val id = cursor.getColumnIndex(COLUMN_ID).takeIf { it != -1 }?.let { cursor.getInt(it) } ?: 0
                 val day = cursor.getColumnIndex(COLUMN_DAY).takeIf { it != -1 }?.let { cursor.getString(it) } ?: ""
-                val date = cursor.getColumnIndex(COLUMN_DATE).takeIf { it != -1 }?.let { Date.valueOf(cursor.getString(it)) } ?: Date(0)
+                val date = cursor.getColumnIndex(COLUMN_DATE).takeIf { it != -1 }?.let { cursor.getString(it) } ?: ""
                 val time = cursor.getColumnIndex(COLUMN_TIME).takeIf { it != -1 }?.let { cursor.getString(it) } ?: ""
                 val teacher = cursor.getColumnIndex(COLUMN_TEACHER).takeIf { it != -1 }?.let { cursor.getString(it) } ?: ""
                 val capacity = cursor.getColumnIndex(COLUMN_CAPACITY).takeIf { it != -1 }?.let { cursor.getInt(it) } ?: 0
@@ -157,7 +157,7 @@ class YogaDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
         if (cursor.moveToFirst()) {
             val id = cursor.getColumnIndex(COLUMN_ID).takeIf { it != -1 }?.let { cursor.getInt(it) } ?: 0
             val day = cursor.getColumnIndex(COLUMN_DAY).takeIf { it != -1 }?.let { cursor.getString(it) } ?: ""
-            val date = cursor.getColumnIndex(COLUMN_DATE).takeIf { it != -1 }?.let { Date.valueOf(cursor.getString(it)) } ?: Date(0)
+            val date = cursor.getColumnIndex(COLUMN_DATE).takeIf { it != -1 }?.let { cursor.getString(it) } ?: ""
             val time = cursor.getColumnIndex(COLUMN_TIME).takeIf { it != -1 }?.let { cursor.getString(it) } ?: ""
             val teacher = cursor.getColumnIndex(COLUMN_TEACHER).takeIf { it != -1 }?.let { cursor.getString(it) } ?: ""
             val capacity = cursor.getColumnIndex(COLUMN_CAPACITY).takeIf { it != -1 }?.let { cursor.getInt(it) } ?: 0
@@ -227,7 +227,7 @@ class YogaDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_
             do {
                 val id = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID))
                 val day = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_DAY))
-                val date = Date.valueOf(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_DATE)))
+                val date = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_DATE))
                 val time = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TIME))
                 val teacher = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TEACHER))
                 val capacity = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_CAPACITY))

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -10,32 +9,27 @@
         android:id="@+id/searchBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableStart="@android:drawable/ic_menu_search"
         android:hint="Search by teacher, date, or day"
-        android:inputType="text"
-        android:drawableStart="@android:drawable/ic_menu_search" />
+        android:inputType="text" />
 
-    <!-- Search Results RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/searchResultsRecyclerView"
+        android:id="@+id/recyclerViewCourses"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:paddingTop="8dp" />
-
+        android:layout_height="match_parent"
+        android:layout_above="@+id/addCourseButton"
+        android:layout_below="@+id/searchBox"
+        android:layout_marginTop="8dp" />
 
     <Button
         android:id="@+id/addCourseButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add New Course"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#2196F3"
-        android:textColor="#FFFFFF"
-        android:layout_marginBottom="16dp" />
+        android:text="Add New Course"
+        android:textColor="#FFFFFF" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewCourses"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp" />
-
-</LinearLayout>
+</RelativeLayout>
