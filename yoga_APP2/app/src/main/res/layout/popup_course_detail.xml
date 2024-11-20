@@ -10,16 +10,10 @@
     android:layout_margin="16dp">
 
     <TextView
-        android:id="@+id/popupTeacher"
+        android:id="@+id/popupDay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Yoga Teacher: "/>
-
-    <TextView
-        android:id="@+id/popupDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Date: "/>
+        android:text="Day: "/>
 
     <TextView
         android:id="@+id/popupTime"
@@ -28,21 +22,33 @@
         android:text="Time: "/>
 
     <TextView
-        android:id="@+id/popupLesson"
+        android:id="@+id/popupCapacity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lesson: "/>
+        android:text="Capacity: "/>
 
     <TextView
-        android:id="@+id/popupGender"
+        android:id="@+id/popupDuration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gender Option: "/>
+        android:text="Duration: "/>
 
     <TextView
         android:id="@+id/popupPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Price: "/>
+
+    <TextView
+        android:id="@+id/popupType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type of class: "/>
+
+    <TextView
+        android:id="@+id/popupDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description: "/>
 
 </LinearLayout>

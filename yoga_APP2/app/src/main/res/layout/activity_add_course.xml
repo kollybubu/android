@@ -14,15 +14,6 @@
         android:spinnerMode="dialog" />
 
     <TextView
-        android:id="@+id/dateField"
-        style="@style/UserInput"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:gravity="center_vertical"
-        android:hint="Date (YYYY-MM-DD)"
-        android:textSize="18sp" />
-
-    <TextView
         android:id="@+id/timeField"
         style="@style/UserInput"
         android:layout_width="match_parent"
@@ -30,15 +21,6 @@
         android:gravity="center_vertical"
         android:hint="Time (HH:MM)"
         android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/teacherField"
-        style="@style/UserInput"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="Teacher Name"
-        android:inputType="text"
-        android:maxLines="1" />
 
     <EditText
         android:id="@+id/capacityField"
@@ -85,22 +67,13 @@
         android:inputType="text"
         android:maxLines="1" />
 
-    <EditText
-        android:id="@+id/lessonField"
-        style="@style/UserInput"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:hint="Lesson Topic"
-        android:inputType="text"
-        android:maxLines="1" />
-
-    <Spinner
+    <!--<Spinner
         android:id="@+id/genderField"
         style="@style/UserInput"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:prompt="@string/gender_prompt"
-        android:spinnerMode="dialog" />
+        android:spinnerMode="dialog" />-->
 
     <Button
         android:id="@+id/saveButton"

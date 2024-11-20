@@ -34,25 +34,9 @@ class CourseAdapter(
     override fun onBindViewHolder(holder: CourseViewHolder, position: Int) {
         val course = courseList[position]
 
-        holder.courseDay.text = "Day: ${course.dayofweek}"
+        holder.courseDay.text = "Day: ${course.dayOfWeek}"
         holder.courseTime.text = "Time: ${course.time}"
-        holder.courseType.text = "Type: ${course.typeofclass}"
-
-        holder.editButton.setOnClickListener {
-            val intent = Intent(context, EditCourseActivity::class.java)
-            intent.putExtra("course_id", course.id)
-            context.startActivity(intent)
-        }
-
-        holder.deleteButton.setOnClickListener {
-            val rowsDeleted = YogaDatabaseHelper.deleteCourse(course.id)
-            if (rowsDeleted > 0) {
-                Toast.makeText(context, "Course deleted successfully", Toast.LENGTH_SHORT).show()
-                (context as AdminHomeActivity).refreshCourseList()
-            } else {
-                Toast.makeText(context, "Error deleting course", Toast.LENGTH_SHORT).show()
-            }
-        }
+        holder.courseType.text = "Type: ${course.typeOfClass}"
 
         // Set click listener for the entire item
         holder.itemView.setOnClickListener { onCourseClick(course) }

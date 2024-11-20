@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dateField"
+        style="@style/UserInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:hint="Date (YYYY-MM-DD)"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/teacherField"
+        style="@style/UserInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Teacher Name"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/additionalCommentField"
+        style="@style/UserInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Additional Comment (Optional)"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/courseField"
+        style="@style/UserInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:gravity="center_vertical"
+        android:hint="Course"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:text="Edit" />
+
+</LinearLayout>

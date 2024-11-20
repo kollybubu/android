@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddCourseActivity"/>
-        <activity android:name=".EditCourseActivity"/>
+        <activity android:name=".AddYogaClassActivity" />
+        <activity android:name=".CourseListActivity" />
     </application>
 
 </manifest>

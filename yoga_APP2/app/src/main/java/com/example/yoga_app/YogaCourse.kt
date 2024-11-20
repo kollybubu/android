@@ -1,19 +1,32 @@
 package com.example.yoga_app
 
-import java.sql.Date
+import com.google.firebase.firestore.Exclude
+import java.io.Serializable
 
 class YogaCourse(
     val id: Int,
-    val dayofweek: String,  // Make sure this matches COLUMN_DAY
-    val date: String,
+    val dayOfWeek: String,  // Make sure this matches COLUMN_DAY
     val time: String,       // Make sure this matches COLUMN_TIME
-    val teacher: String,
     val capacity: Int,      // Make sure this matches COLUMN_CAPACITY
     val duration: String,   // Make sure this matches COLUMN_DURATION
     val price: Double,      // Make sure this matches COLUMN_PRICE
-    val typeofclass: String, // Make sure this matches COLUMN_TYPE
-    val lesson: String,
+    val typeOfClass: String, // Make sure this matches COLUMN_TYPE
     val description: String, // Make sure this matches COLUMN_DESCRIPTION
-    val genderOption: String // Make sure this matches COLUMN_GENDER_OPTION
-)
+): Serializable {
+
+    @Exclude
+    fun toMap(): HashMap<String, Any> {
+        val result = hashMapOf<String, Any>()
+        result["id"] = id
+        result["dayOfWeek"] = dayOfWeek
+        result["time"] = time
+        result["capacity"] = capacity
+        result["duration"] = duration
+        result["price"] = price
+        result["typeOfClass"] = typeOfClass
+        result["description"] = description
+
+        return result
+    }
+}
 

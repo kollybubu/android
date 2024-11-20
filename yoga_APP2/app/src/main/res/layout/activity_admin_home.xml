@@ -14,22 +14,51 @@
         android:inputType="text" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewCourses"
+        android:id="@+id/recyclerViewClasses"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/addCourseButton"
+        android:layout_above="@+id/buttonLayout"
         android:layout_below="@+id/searchBox"
         android:layout_marginTop="8dp" />
 
-    <Button
-        android:id="@+id/addCourseButton"
+    <LinearLayout
+        android:id="@+id/buttonLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#2196F3"
-        android:text="Add New Course"
-        android:textColor="#FFFFFF" />
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/manageCourseButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2196F3"
+            android:text="Manage Course"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/addClassButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2196F3"
+            android:text="Add New Class"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/uploadToServerButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2196F3"
+            android:text="Upload to server"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
 
 </RelativeLayout>
