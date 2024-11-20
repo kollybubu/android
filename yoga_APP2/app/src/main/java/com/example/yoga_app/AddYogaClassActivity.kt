@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
@@ -197,7 +198,8 @@ class AddYogaClassActivity : AppCompatActivity() {
                 updatedValues
             )  // Pass the content values for update
         } else {
-            yogaDatabaseHelper.addYogaClass(yogaClass)
+            val result = yogaDatabaseHelper.addYogaClass(yogaClass)
+            Log.d("ClassAdded:", result.toString())
         }
     }
 

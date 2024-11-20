@@ -77,6 +77,11 @@ class AdminHomeActivity : AppCompatActivity() {
         })
 
         uploadToServerButton.setOnClickListener {
+            Toast.makeText(
+                this,
+                "Uploading the data...",
+                Toast.LENGTH_LONG
+            ).show()
             uploadToFirestore()
         }
 
@@ -117,8 +122,7 @@ class AdminHomeActivity : AppCompatActivity() {
                 applicationContext,
                 "Successfully uploaded the data!",
                 Toast.LENGTH_LONG
-            )
-                .show()
+            ).show()
         }
     }
 
@@ -247,7 +251,7 @@ class AdminHomeActivity : AppCompatActivity() {
                 yogaDatabaseHelper.searchClassesByDay(query)
 
         results.forEach {
-            Log.d("Result: ","${it.id}, ${it.teacher}, ${it.yogaCourse.dayOfWeek}")
+            Log.d("Result: ", "${it.id}, ${it.teacher}, ${it.yogaCourse.dayOfWeek}")
         }
 
         yogaClassAdapter.updateYogaClass(results.distinctBy { it.id })

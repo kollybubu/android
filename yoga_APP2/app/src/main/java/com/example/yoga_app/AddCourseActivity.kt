@@ -2,6 +2,7 @@ package com.example.yoga_app
 
 import android.app.TimePickerDialog
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -147,7 +148,8 @@ class AddCourseActivity : AppCompatActivity() {
                 updatedValues
             )  // Pass the content values for update
         } else {
-            yogaDatabaseHelper.addCourse(course)
+            val result = yogaDatabaseHelper.addCourse(course)
+            Log.d("CourseAdded:", result.toString())
         }
     }
 

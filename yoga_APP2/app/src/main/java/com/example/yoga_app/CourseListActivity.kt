@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.result.registerForActivityResult
@@ -114,6 +115,8 @@ class CourseListActivity : AppCompatActivity() {
             if (result > 0) {
                 // Successfully deleted the course, refresh the course list
                 refreshCourseList()
+            } else {
+                Toast.makeText(this, "You can't delete this course because the course is owned by the class.", Toast.LENGTH_LONG).show()
             }
         }
         deleteDialogBuilder.setNegativeButton("No") { dialog, _ ->

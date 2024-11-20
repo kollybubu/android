@@ -27,7 +27,7 @@ class YogaDatabaseHelper(context: Context) :
 
         //        const val COLUMN_GENDER_OPTION = "gender_option"
         const val TABLE_CLASSES = "Classes"
-        const val COLUMN_CLASS_ID = "id"
+        const val COLUMN_CLASS_ID = "_id"
         const val COLUMN_CLASS_DATE = "date"
         const val COLUMN_CLASS_TEACHER = "teacher"
         const val COLUMN_CLASS_COMMENT = "additional_comment"
@@ -303,7 +303,7 @@ class YogaDatabaseHelper(context: Context) :
         val cursor = db.query(
             "$TABLE_CLASSES , $TABLE_COURSES",
             null,
-            "$TABLE_COURSES.$COLUMN_ID = $TABLE_CLASSES.$COLUMN_COURSE_ID AND $TABLE_CLASSES.$COLUMN_CLASS_ID = ?",
+            "$TABLE_CLASSES.$COLUMN_CLASS_ID = ? AND $TABLE_COURSES.$COLUMN_ID = $TABLE_CLASSES.$COLUMN_COURSE_ID",
             arrayOf(classId.toString()),
             null,
             null,
@@ -362,13 +362,26 @@ class YogaDatabaseHelper(context: Context) :
     // Delete course by ID
     fun deleteCourse(courseId: Int): Int {
         val db = writableDatabase
-        return db.delete(TABLE_COURSES, "$COLUMN_ID = ?", arrayOf(courseId.toString()))
+        val cursor = db.query(
+            TABLE_CLASSES,
+            null,
+            "$TABLE_CLASSES.$COLUMN_COURSE_ID = $courseId",
+            null,
+            null,
+            null,
+            null
+        )
+        return if(cursor.count > 0) {
+            -1
+        } else {
+            db.delete(TABLE_COURSES, "$COLUMN_ID = ?", arrayOf(courseId.toString()))
+        }
     }
 
     // Delete yoga class by ID
     fun deleteYogaClass(classId: Int): Int {
         val db = writableDatabase
-        return db.delete(TABLE_COURSES, "$COLUMN_CLASS_ID = ?", arrayOf(classId.toString()))
+        return db.delete(TABLE_CLASSES, "$COLUMN_CLASS_ID = ?", arrayOf(classId.toString()))
     }
 
     // Search classes by partial teacher name
@@ -392,8 +405,8 @@ class YogaDatabaseHelper(context: Context) :
         val cursor = db.query(
             "$TABLE_CLASSES , $TABLE_COURSES",
             null,
-            "$TABLE_COURSES.$COLUMN_ID = $TABLE_CLASSES.$COLUMN_COURSE_ID AND $TABLE_CLASSES.$COLUMN_CLASS_DATE = ?",
-            arrayOf(searchQuery),
+            "$TABLE_COURSES.$COLUMN_ID = $TABLE_CLASSES.$COLUMN_COURSE_ID AND $TABLE_CLASSES.$COLUMN_CLASS_DATE LIKE ?",
+            arrayOf("%$searchQuery%"),
             null,
             null,
             null
